@@ -295,7 +295,7 @@ class BaseNEncoder(BaseEstimator, TransformerMixin):
         if self.base == 1:
             digits = len(values) + 1
         else:
-            digits = int(np.ceil(math.log(len(values), self.base))) + 1
+            digits = int(np.floor(math.log(len(values), self.base))) + 1
 
         return digits
 
